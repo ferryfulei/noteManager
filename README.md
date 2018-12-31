@@ -1,5 +1,5 @@
 # NoteManager
-#### NoteManager is a REST API used to save, update, list, archived notes(/attached files) with a user signup/login system.
+#### NoteManager is a REST API used to save, update, list, and archived notes(attached files) with a user signup/login system.
 
 ```
  Starting command: node server.js
