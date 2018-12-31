@@ -24,7 +24,7 @@ exports.notes_post = (req, res, next) => {
     });
     note.save().then(result => {
         res.status(201).json({
-            message: 'Created product',
+            message: 'Created note',
             createdProduct: {
                 _id: result._id,
                 text: result.text,
@@ -77,12 +77,15 @@ exports.notes_patch = (req, res, next) => {
     const id = req.params.noteId;
     Note.update(
         {_id: id}, 
-        {$set: req.body}
+        {$set: {
+            text: req.body.text
+        }}
         )
     .exec()
     .then(result => {
+        console.log(result);
         res.status(200).json({
-            message: 'Product updated'
+            message: 'Updated note'
         });
     })
     .catch(err => {

@@ -32,9 +32,9 @@ router.get('/', checkAuth, NotesController.notes_get_all);
 
 router.post('/', checkAuth, upload.single("attachedFile"), NotesController.notes_post);
 
-router.get('/:folderName', );
+router.get('/:folderName', NotesController.notes_get_folder);
 
 router.delete('/:noteId', checkAuth, NotesController.notes_delete);
 
-router.patch('/:noteId', checkAuth, NotesController.notes_patch);
+router.patch('/:noteId', checkAuth, upload.single("attachedFile"), NotesController.notes_patch);
 module.exports = router;

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const noteSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     text: {
-        type: String
+        type: String, required: true
     },
     folder: {
         type: String,
