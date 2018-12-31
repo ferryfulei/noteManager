@@ -1,23 +1,27 @@
-# noteManager
-noteManager is a REST API used to save, update, list, archived notes(/attached files) with a user signup/login system.
+# NoteManager
+#### NoteManager is a REST API used to save, update, list, archived notes(/attached files) with a user signup/login system.
 
-
-Starting command: node server.js
-URL: 
-/users/signup
+```
+ Starting command: node server.js
+ ```
+ 
+```
+ URL: 
+ /users/signup
   Method:
   POST
   Data Params:
   email: [String]
   password: [String]
-
   Success Response:
   Code: 201
   Content: {"message": "User created"}
   Error Response:
   Code: 409
   Content: {"message": "Mail exists"}
-
+  ```
+  
+ ```
 URL: 
 /users/login
   Method:
@@ -33,7 +37,8 @@ URL:
   Error Response:
   Code: 401
   Content: {"message": "Auth failed"}
-
+```
+```
 URL: 
 /users/:userId
   Method:
@@ -47,8 +52,9 @@ URL:
   Error Response:
   Code: 401
   Content: {"message": "Auth failed"}
-  
+  ```
 
+```
 URL:
 /notes
   Method:
@@ -69,7 +75,9 @@ URL:
   Error Response:
   Code: 401
   Content: {"message": "Auth failed"}
+```
 
+```
 URL:
 /notes/:folderName
   Method:
@@ -91,7 +99,9 @@ URL:
   Error Response:
   Code: 401
   Content: {"message": "Auth failed"}
+  ```
   
+  ```
   URL:
  /notes
   Method:
@@ -123,7 +133,9 @@ URL:
   Content: {"message": "Auth failed"}
   Code: 500
   Content: {"message": "Path `text` is required."}
+  ```
   
+  ```
 URL:
  /notes/:noteId
   Method:
@@ -146,7 +158,9 @@ URL:
   Error Response:
   Code: 401
   Content: {"message": "Auth failed"}
+```
 
+```
   URL:
  /notes/:noteId
   Method:
@@ -166,3 +180,4 @@ URL:
   Error Response:
   Code: 401
   Content: {"message": "Auth failed"}
+```
